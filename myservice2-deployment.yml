@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myservice
+  name: myservice2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myservice
+      app: myservice2
   template:
     metadata:
       labels:
-        app: myservice
+        app: myservice2
     spec:
       containers:
         - image: noureddine078/myservice:latest
           imagePullPolicy: IfNotPresent
-          name: myservice
+          name: myservice2
       restartPolicy: Always
